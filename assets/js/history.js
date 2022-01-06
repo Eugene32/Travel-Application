@@ -20,7 +20,8 @@ function saveToHistory() {
     // newBtn.classList.add('button');
     // newBtn.classList.add('is-dark');
     // newBtn.classList.add('is-fullwidth');
-    newBtn.setAttribute('class', 'button is-dark is-fullwidth is-rounded columns');
+    newBtn.setAttribute('class', 'button is-dark is-fullwidth is-rounded columns my-history-btn');
+    
 
     var entryArray = [to, from, date];
     console.log(entryArray);
