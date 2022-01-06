@@ -1,2 +1,2 @@
-# Travel-Application
-Project 1
+# Travel-App
+Group Project 1 - Bootcamp

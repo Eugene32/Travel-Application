@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Travel Planner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <main class="container is-vertical">
+        <div class="container notification is-info show-border my-header">
+            <h1 class="title is-1 is-primary"> Travel Planner </h1>
+        </div>
+
+        <div class="container columns">
+
+            <section id="user-interface" class="container column">
+                <form id="inputForm" class="box">
+                    
+                    <div class="field">
+                        <label class="label">From: </label>
+                        <div class="control">
+                            <input id="loc-from" class="input is-info" type="text" placeholder="Melbourne">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Destination: </label>
+                        <div class="control">
+                            <input id="loc-to" class="input is-info" type="text" placeholder="Sydney">
+
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Date: </label>
+                        <div class="control">
+                            <input id="form-date" class="input is-info" type="date">
+
+                        </div>
+                    </div>
+                    <input id="btn-submit" type="submit" value="Submit" class="button is-info is-fullwidth">
+                </form>
+            </section>
+
+            <section id="map-section" class="container column">
+                <div class="box">
+                    <Map>Google Map</Map>
+                </div>
+            </section>
+
+            <section id="weather-section" class="container column">
+                <div class="box">
+                    Weather
+                </div>
+            </section>
+
+        </div>
+
+
+    </main>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

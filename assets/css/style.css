@@ -1,0 +1,9 @@
+.show-border{
+    border: 2px solid black;
+}
+
+.my-header{
+    text-align: center;
+    /* color: white;
+    background-image: linear-gradient(to right, rgba(67, 67, 238, 0.726) , rgb(55, 0, 255)); */
+}
