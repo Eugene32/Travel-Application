@@ -17,11 +17,11 @@
             <h1 class="title is-1 is-primary"> Travel Planner </h1>
         </div>
 
-        <div class="container columns">
+        <div class="container columns ">
 
             <section id="user-interface" class="container column">
                 <form id="inputForm" class="box">
-                    
+
                     <div class="field">
                         <label class="label">From: </label>
                         <div class="control">
@@ -33,23 +33,30 @@
                         <label class="label">Destination: </label>
                         <div class="control">
                             <input id="loc-to" class="input is-info" type="text" placeholder="Sydney">
-
                         </div>
+
                     </div>
 
                     <div class="field">
                         <label class="label">Date: </label>
                         <div class="control">
                             <input id="form-date" class="input is-info" type="date">
-
                         </div>
                     </div>
+
                     <input id="btn-submit" type="submit" value="Submit" class="button is-info is-fullwidth">
+                    
                 </form>
+
+                <div id="history-window" class="container">
+                    <div id="history-content" class="box has-text-centered">
+                        <span class="title is-5 ">Search History</span>
+                    </div>
+                </div>
             </section>
 
             <section id="map-section" class="container column">
-                <div class="box">
+                <div class="box ">
                     <Map>Google Map</Map>
                 </div>
             </section>
@@ -61,14 +68,13 @@
             </section>
 
         </div>
-
-
     </main>
+
     <footer class="footer">
         <div class="content has-text-centered">
-          <span>&copy &#x1d19&#670 KJL SK 2022</span>
+            <span class="title is-6">&copy &#x1d19&#670 KJL SK 2022</span>
         </div>
-      </footer>
+    </footer>
 
     <script src="./assets/js/script.js"></script>
 </body>
