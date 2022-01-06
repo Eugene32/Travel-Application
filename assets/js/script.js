@@ -2,6 +2,7 @@ var form = document.getElementById('inputForm');
 var inputDest = document.getElementById('loc-to');
 var inputFrom = document.getElementById('loc-from');
 var formDate = document.getElementById('form-date');
+var historyWindow = document.getElementById('history-content');
 
 
 form.addEventListener('submit', (event) => {
@@ -10,7 +11,7 @@ form.addEventListener('submit', (event) => {
     var Origin = inputFrom.value;
     var chosenDate = formDate.value
 
-    console.log(chosenDate);
+    
     
     if (Destination){
       // Add function here to display map of destination
