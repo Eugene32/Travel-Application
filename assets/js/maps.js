@@ -3,3 +3,12 @@ var map = new mapboxgl.Map({
 container: 'map',
 style: 'mapbox://styles/mapbox/streets-v11'
 });
+
+map.addControl(new mapboxgl.NavigationControl());
+
+map.addControl(
+    new MapboxDirections({
+    accessToken: mapboxgl.accessToken
+    }),
+    'top-left'
+    );
