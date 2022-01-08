@@ -12,7 +12,7 @@ body {
   padding: 10px;
 }
 
-header h1 {
+h3 {
   padding: 20px 0 15px 0;
   text-align: center;
   color: black!important;
@@ -21,7 +21,7 @@ header h1 {
   z-index: 9999;
 }
 
-h3 .title {
+h4 .title {
   color: black;
 }
 /*search bar styling*/
@@ -84,6 +84,31 @@ input{
 }
 .has-background-info {
   background-color: #5d6e7c!important;
+}
+
+.card-body {
+  height: 129px;
+}
+h4#day-1{
+  padding-top: 7px;
+}
+h4#day-2{
+  padding-top: 7px;
+}
+h4#day-3{
+  padding-top: 7px;
+}
+h4#day-4{
+  padding-top: 7px;
+}
+h4#day-5 {
+  padding-top: 7px;
+}
+li {
+  line-height: 1.5;
+}
+p {
+  line-height: 1.5;
 }
 
 @media screen and (max-width: 1050px) {

@@ -39,3 +39,6 @@ ol,
 ul {
   list-style: none;
 }
+main.container.is-vertical {
+  width: 100%;
+}
