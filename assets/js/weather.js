@@ -16,7 +16,7 @@ var geoList = document.getElementById('geoList');
 
 const request = new XMLHttpRequest();
 
-// Pull current location from local ip
+
 function currentLocation(){
   request.open('GET', 'https://api.ipdata.co/city?api-key=b53d1b37f3bb53a8adf505bfa55a8744e4c397f7dab1a848f5b4cb3f&fields');
   request.setRequestHeader('Accept', 'application/json');
@@ -30,7 +30,7 @@ function currentLocation(){
   request.send();
 }
 
-// check for local storage
+
 if(localStorage.getItem('city')===null){
     searchHistory = [];
 }else{
@@ -41,16 +41,16 @@ getGeoApi(city);
 })
 
 
-// stores searched city in local storage and displays below search bar
+
 let storeRecentSearch = function(){
 
     searchHistory = searchHistory.slice(Math.max(searchHistory.length - 5,0))
 
-     //clears previous search displays
+     
      savedSearchesDiv.innerHTML = "";
     
     
-     // displays searched cities 
+     
      for(let i = 0; i < searchHistory.length; i++){
              
         let listedCity = document.createElement("li");
@@ -65,7 +65,7 @@ let storeRecentSearch = function(){
       };
 }
 
-// When user clicks on searched city link, modal will pop up with that cities information
+
 let displayRecentSearch = function(event){
   let targetEl = event.target;
 
@@ -78,27 +78,27 @@ let displayRecentSearch = function(event){
   }
 }
 
-// Pulls value from search bar
+
 let citySearch = function(location){
   let city = searchBar.value.trim().toLowerCase();
   
-  // user input city in searchbar
+  
   if(city){
   
-    // stores city into local storage
+    
     localStorage.setItem("city", JSON.stringify(searchHistory));
     storeRecentSearch(city);
     getGeoApi(city);
     displayCityForecast(city);
     fiveDayForecast(city);
 
-    // pushes new city into array. prevents duplicates from displaying
+    
     if (searchHistory.indexOf(city) === -1) searchHistory.push(city);
 
-    // clears searchbar
+    
     searchBar.value = "";
 
-  // user clicks on "My Location" button
+  
   }else if(location){
     console.log(location);
 
@@ -114,7 +114,7 @@ let citySearch = function(location){
   }
 }
 
-// ------------------ GeoLocator API -------------------------------------------------------------------------------
+
 function getGeoApi(city) {
   var requestUrl = "https://api.ipgeolocation.io/astronomy?apiKey=d2acb4a4fa244bcfadf3ea9bc8f04705&location=" + city;
   fetch(requestUrl)
@@ -206,7 +206,7 @@ function getGeoApi(city) {
 }
 
 
-//api call for currently searched city
+
 function displayCityForecast(city){
   var apiKey = "92252352bb4c13bb77ea5f2f8e41a5a8";
   var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey;
@@ -233,9 +233,7 @@ function displayCityForecast(city){
     var lat = response.coord.lat
     var lon = response.coord.lon
       
-    // send coordinate data to findCounty function
-    //findCounty(lat, lon)
-
+    
 
     queryURL = "https://api.openweathermap.org/data/2.5/uvi?appid=" + apiKey + "&lat=" + lat + "&lon=" + lon; 
     $.ajax({
@@ -243,7 +241,7 @@ function displayCityForecast(city){
       method: "GET"
       }).then(function(response){
 
-      //apply class for UV index 
+      
       var uvIndex = response.value;
       console.log(uvIndex);
       $("#city-uvindex").removeClass("favorable");
@@ -262,7 +260,7 @@ function displayCityForecast(city){
   }); 
 };
 
-// begin api call for 5 day forecast	
+	
 function fiveDayForecast(city){	
   var apiKey = "92252352bb4c13bb77ea5f2f8e41a5a8"	
   var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + apiKey;	
@@ -288,7 +286,7 @@ function fiveDayForecast(city){
 };
 
 
-// main modal event
+
 searchBtn.addEventListener('click', function () { 
   modal.style.display = 'block' 
 }) 
@@ -299,7 +297,7 @@ close.addEventListener('click', function () {
   extended5.style.display = 'none'
 }) 
 
-// 5 day forecast second modal event
+
 fiveDayBtn.addEventListener('click', function() {
   let extended5 = document.getElementById("forecast-modal");
   extended5.style.display = 'block'
@@ -317,18 +315,18 @@ window.addEventListener('click', function (event) {
   } 
 }) 
 
-// Make 5 Day forecast Draggable
+
 $( function() {
   $( "#forecast-modal" ).draggable();
 } );
 
-// recent searches event
+
 savedCityEl.addEventListener("click", displayRecentSearch);
 
-// user location event
+
 localBtn.addEventListener('click', currentLocation);
 
-// user input event 
+
 searchBtn.addEventListener("click", citySearch); 
 document.addEventListener('keypress', (event) => {
   var keyName = event.key;
