@@ -45,7 +45,7 @@ input{
  
  .modal-card-head {
    /*background-color: #1b2444;*/
-   background-image: url('../images/weather.png');
+   background-image: url('./assets/images/weather.png');
    background-size: cover;
   background-position: center;
  }
