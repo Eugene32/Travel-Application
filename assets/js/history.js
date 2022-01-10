@@ -44,13 +44,14 @@ function saveToHistory() {
             option.innerText = entryArray;
             historyList.insertBefore(option, historyList.firstChild);
             arrayForStorage.unshift(entryArray);
-           // console.log('unshifted value of arrayforstorage is ' + arrayForStorage);
             if (historyList.children.length == 6) {
                 arrayForStorage.pop();
                 historyList.lastChild.remove();
              }
             saveToLoc();
         }
+
+
 
     }
 
