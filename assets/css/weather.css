@@ -1,5 +1,5 @@
 
-/*   This formats the entire body and is making the display to a very small width
+ /* This formats the entire body and is making the display to a very small width
 body {
   background-image: url('../images/weather.png');
   background-size: cover;
@@ -7,7 +7,7 @@ body {
   display: flex;
       min-height: 100vh;
       flex-direction: column;
-}  */
+}   */
 
 
 /* navbar styling */
