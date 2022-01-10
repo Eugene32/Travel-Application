@@ -2,7 +2,7 @@ var form = document.getElementById('inputForm');
 var inputDest = document.getElementById('loc-to');
 var inputFrom = document.getElementById('loc-from');
 var formDate = document.getElementById('form-date');
-var historyWindow = document.getElementById('history-content');
+var historyWindow = document.getElementById('search-content');
 
 
 form.addEventListener('submit', (event) => {

@@ -2,7 +2,9 @@
 // var inputDest = document.getElementById('loc-to');
 // var inputFrom = document.getElementById('loc-from');
 // var formDate = document.getElementById('form-date');
-// var historyWindow = document.getElementById('history-content');
+// var historyWindow = document.getElementById('search-content');
+//var historyList = document.getElementById('drop-down');
+var historyList 
 
 
 function saveToHistory() {
@@ -10,21 +12,27 @@ function saveToHistory() {
     var to = inputDest.value;
     var date = formDate.value;
 
-    console.log(from);
-    console.log(to);
-    console.log(date);
-
-    var newBtn = document.createElement('button');
-    newBtn.setAttribute('class', 'button is-dark is-fullwidth is-rounded columns my-history-btn');
     var entryArray = [to, from, date];
-  
-    for (let index = 0; index < 3; index++) {
-        var span = document.createElement('span');
-        span.innerText = entryArray[index];
-        span.setAttribute('class', 'column' );
-        newBtn.append(span);
+
+
+
+    if (historyWindow.children.length === 0) {
+        console.log('Creation of selection list was made');
+        var div = document.createElement('div');
+        div.setAttribute('class', 'select is-info is-multiple is-fullwidth')
+        var select = document.createElement('select');
+        select.setAttribute('id', 'drop-down');
+        div.append(select);
+        historyWindow.append(div);
+        historyList = document.getElementById('drop-down');
     }
 
-    historyWindow.append(newBtn);
+    if (historyWindow.firstChild) {
+        console.log('Creation of option was executed');
+        var option = document.createElement('option');
+        option.innerText = entryArray;
+        console.log(option.value);
+        historyList.append(option);
+    }
 
 }
