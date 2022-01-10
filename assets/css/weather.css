@@ -1,13 +1,16 @@
 
+/*   This formats the entire body and is making the display to a very small width
 body {
-  /*background-image: url('../images/weather.png');*/
+  background-image: url('../images/weather.png');
   background-size: cover;
   background-position: center;
   display: flex;
       min-height: 100vh;
       flex-direction: column;
-}
-/*navbar styling*/
+}  */
+
+
+/* navbar styling */
 .image {
   padding: 10px;
 }
