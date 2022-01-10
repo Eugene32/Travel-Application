@@ -1,1 +1,16 @@
 
+.my-weather-box{
+    height: 100%;
+}
+
+.my-maps-box{
+    height: 700px;   
+}
+
+.my-history-span{
+    margin: 0px 5px;
+}
+
+.my-history-btn{
+    margin: 1px; 
+}

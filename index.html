@@ -11,11 +11,19 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
     <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
     <link rel="stylesheet" href="./assets/css/weather.css">
 <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css" type="text/css">
+
+    <script
+        src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+    <link rel="stylesheet"
+        href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css"
+        type="text/css">
+
 
 </head>
 
@@ -27,9 +35,9 @@
 
         <div class="container columns">
 
-            <section id="user-interface" class="container column">
+            <section id="user-interface" class="container column is-one-quarter">
                 <form id="inputForm" class="box">
-                    
+
                     <div class="field">
                         <label class="label">From: </label>
                         <div class="control">
@@ -54,31 +62,31 @@
                     </div>
                     <input id="btn-submit" type="submit" value="Submit" class="button is-info is-fullwidth">
                 </form>
-                
-                
-                
+
                 <div id="history-window" class="container">
                     <div class="box has-text-centered">
-                        <span class="title is-5 ">Search History</span>
+                        <span class="title is-5 tag is-white">Search History</span>
                         <div id="history-content" class="container">
 
                         </div>
                     </div>
                 </div>
-
             </section>
-            
-               
-            
 
             <section id="map-section" class="container column">
-                <div class="box" id="map">
-                    <Map>Google Map</Map>
+
+                <div class="box my-maps-box" id="map">
+                    <div class="box ">
+                        <Map>Google Map</Map>
+                    </div>
+
                 </div>
+
             </section>
 
-            <section id="weather-section" class="container column">
-                <div class="box">
+
+            <section id="weather-section" class="container column is-one-quarter">
+                <div class="box my-weather-box">
                     Weather
                 </div>
             </section>
@@ -89,12 +97,13 @@
     </main>
     <footer class="footer">
         <div class="content has-text-centered">
-          <span>&copy &#x1d19&#670 KJL SK 2022</span>
+            <span>&copy &#x1d19&#670 KJL SK 2022</span>
         </div>
-      </footer>
+    </footer>
 
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/maps.js"></script>
+
 
     <script
       src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -114,6 +123,9 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script src="./assets/js/weather.js"></script>
+
+
+    <script src="./assets/js/history.js"></script>
 
 </body>
 
