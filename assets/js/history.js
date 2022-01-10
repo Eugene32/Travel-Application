@@ -14,18 +14,10 @@ function saveToHistory() {
     console.log(to);
     console.log(date);
 
-
-
     var newBtn = document.createElement('button');
-    // newBtn.classList.add('button');
-    // newBtn.classList.add('is-dark');
-    // newBtn.classList.add('is-fullwidth');
-    newBtn.setAttribute('class', 'button is-dark is-fullwidth is-rounded columns');
-
+    newBtn.setAttribute('class', 'button is-dark is-fullwidth is-rounded columns my-history-btn');
     var entryArray = [to, from, date];
-    console.log(entryArray);
-
-
+  
     for (let index = 0; index < 3; index++) {
         var span = document.createElement('span');
         span.innerText = entryArray[index];
@@ -35,9 +27,4 @@ function saveToHistory() {
 
     historyWindow.append(newBtn);
 
-    
-
-     
-
-   
 }
