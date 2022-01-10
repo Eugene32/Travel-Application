@@ -1,0 +1,122 @@
+
+body {
+  /*background-image: url('../images/weather.png');*/
+  background-size: cover;
+  background-position: center;
+  display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+}
+/*navbar styling*/
+.image {
+  padding: 10px;
+}
+
+h3 {
+  padding: 20px 0 15px 0;
+  text-align: center;
+  color: black!important;
+  font-size: 30px !important;
+  background-color: transparent;
+  z-index: 9999;
+}
+
+h4 .title {
+  color: black;
+}
+/*search bar styling*/
+#searchbar {
+    max-width: 50%;
+}
+input{
+    text-align:center;
+ }
+
+ .button {
+    color: white; 
+    background-color:#db6400;
+    border: none;
+ }
+ .button:hover{
+  background-color: #b05102;  
+  color:white; 
+ }
+ 
+ 
+ .modal-card-head {
+   /*background-color: #1b2444;*/
+   background-image: url('./assets/images/weather.png');
+   background-size: cover;
+  background-position: center;
+ }
+   .modal-card-title {
+     color: white;
+ }
+
+/*styling for UV index conditions */
+.favorable {
+    color: green; 
+    font-weight:bolder
+}
+  
+.moderate {
+    color: orange; 
+    font-weight:bolder
+}
+  
+.severe {
+    color: red;
+    font-weight:bolder
+} 
+
+/*5 day forecast modal styling*/
+
+.forecastbox {
+    text-align: center;
+    max-height: calc(80% - 10px);
+    overflow-y: auto;
+    width:25%;
+    flex-direction: column;
+}
+
+.has-background-link {
+  background-color: #071552!important;
+}
+.has-background-info {
+  background-color: #5d6e7c!important;
+}
+
+.card-body {
+  height: 129px;
+}
+h4#day-1{
+  padding-top: 7px;
+}
+h4#day-2{
+  padding-top: 7px;
+}
+h4#day-3{
+  padding-top: 7px;
+}
+h4#day-4{
+  padding-top: 7px;
+}
+h4#day-5 {
+  padding-top: 7px;
+}
+li {
+  line-height: 1.5;
+}
+p {
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 1050px) {
+    .forecastbox {
+       width: 50%;
+    }
+    .forecastbox p {
+        font-size: 15px;
+    }
+
+ }
