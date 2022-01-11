@@ -10,15 +10,18 @@ form.addEventListener('submit', (event) => {
     var Destination = inputDest.value;
     var Origin = inputFrom.value;
     var chosenDate = formDate.value
+    
 
     
     
     if (Destination){
       // Add function here to display map of destination
       // Add function here to display weather at destination with or without dates
-
+      citySearch();
+      modal.style.display = 'block'
 
       saveToHistory(); // Function to save history
+
 
     }
 

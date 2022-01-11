@@ -1,0 +1,105 @@
+
+body {
+  display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+      justify-content: center;
+}
+
+h3.title.is-1 {
+  font-size: 25px;
+  text-align: center;
+}
+h3.title {
+  font-size: 25px;
+}
+
+h3 .title {
+  color: black;  
+}
+
+#searchbar {
+    max-width: 50%;
+}
+input{
+    text-align:center;
+ }
+
+ .button {
+    color: white; 
+    background-color:#db6400;
+    border: none;
+ }
+ .button:hover{
+  background-color: #b05102;  
+  color:white; 
+ } 
+ 
+ .modal-card-head {
+   background-image: url('../images/weather.png');
+   background-size: cover;
+  background-position: center;
+ }
+   .modal-card-title {
+     color: white;
+ }
+
+.favorable {
+    color: green; 
+    font-weight:bolder
+}
+  
+.moderate {
+    color: orange; 
+    font-weight:bolder
+}
+  
+.severe {
+    color: red;
+    font-weight:bolder
+} 
+.forecastbox {
+    text-align: center;
+    max-height: calc(80% - 10px);
+    overflow-y: auto;
+    width:25%;
+    flex-direction: column;
+}
+
+.has-background-link {
+  background-color: #071552!important;
+}
+.has-background-info {
+  background-color: #5d6e7c!important;
+}
+ul#geoList {
+  line-height: 1.2;
+}
+p {
+  line-height: 1.2;
+}
+.card-body {
+    padding: 5px;
+}
+#searchbar{
+  display:none;
+}
+#btn{
+  display: none;
+}
+#saved-searches{
+  display: none;
+}
+#local-btn{
+  display: none;
+}
+
+@media screen and (max-width: 1050px) {
+    .forecastbox {
+       width: 50%;
+    }
+    .forecastbox p {
+        font-size: 15px;
+    }
+
+ }
