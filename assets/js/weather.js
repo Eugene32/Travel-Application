@@ -55,7 +55,6 @@ let storeRecentSearch = function(){
         cityLink.setAttribute("class", "searched-city has-text-white")
         cityLink.innerHTML = searchHistory[i];
         listedCity.appendChild(cityLink);
-
       };
 }
 
