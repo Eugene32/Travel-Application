@@ -1,33 +1,22 @@
-
-/*   This formats the entire body and is making the display to a very small width
 body {
-  background-image: url('../images/weather.png');
-  background-size: cover;
-  background-position: center;
   display: flex;
       min-height: 100vh;
       flex-direction: column;
-}  */
-
-
-/* navbar styling */
-.image {
-  padding: 10px;
+      justify-content: center;
 }
 
-header h1 {
-  padding: 20px 0 15px 0;
+h3.title.is-1 {
+  font-size: 25px;
   text-align: center;
-  color: black!important;
-  font-size: 30px !important;
-  background-color: transparent;
-  z-index: 9999;
+}
+h3.title {
+  font-size: 25px;
 }
 
 h3 .title {
-  color: black;
+  color: black;  
 }
-/*search bar styling*/
+
 #searchbar {
     max-width: 50%;
 }
@@ -43,12 +32,10 @@ input{
  .button:hover{
   background-color: #b05102;  
   color:white; 
- }
- 
+ } 
  
  .modal-card-head {
-   /*background-color: #1b2444;*/
-   background-image: url('./assets/images/weather.png');
+   background-image: url('../images/weather.png');
    background-size: cover;
   background-position: center;
  }
@@ -56,7 +43,6 @@ input{
      color: white;
  }
 
-/*styling for UV index conditions */
 .favorable {
     color: green; 
     font-weight:bolder
@@ -71,9 +57,6 @@ input{
     color: red;
     font-weight:bolder
 } 
-
-/*5 day forecast modal styling*/
-
 .forecastbox {
     text-align: center;
     max-height: calc(80% - 10px);
@@ -87,6 +70,27 @@ input{
 }
 .has-background-info {
   background-color: #5d6e7c!important;
+}
+ul#geoList {
+  line-height: 1.2;
+}
+p {
+  line-height: 1.2;
+}
+.card-body {
+    padding: 5px;
+}
+#searchbar{
+  display:none;
+}
+#btn{
+  display: none;
+}
+#saved-searches{
+  display: none;
+}
+#local-btn{
+  display: none;
 }
 
 @media screen and (max-width: 1050px) {
