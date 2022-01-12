@@ -2,7 +2,7 @@ var form = document.getElementById('inputForm');
 var inputDest = document.getElementById('loc-to');
 var inputFrom = document.getElementById('loc-from');
 var formDate = document.getElementById('form-date');
-var historyWindow = document.getElementById('search-content');
+var historyWindow = document.getElementById('history-content');
 
 
 form.addEventListener('submit', (event) => {
@@ -18,7 +18,7 @@ form.addEventListener('submit', (event) => {
       // Add function here to display map of destination
       // Add function here to display weather at destination with or without dates
       citySearch();
-      modal.style.display = 'block'
+      modal.style.display = 'block';
 
       
       saveToHistory(); // Function to save history

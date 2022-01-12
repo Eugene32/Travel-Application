@@ -1,11 +1,12 @@
 var historyList = [];
 var arrayForStorage = [];
+var historyWindow = document.getElementById('history-content');
 
 displayHistory();
 
 function saveToHistory() {
     retLocStrg();
-    
+    console.log('This is working');
     var from = inputFrom.value;
     var to = inputDest.value;
     var date = formDate.value;
@@ -48,6 +49,7 @@ function saveToHistory() {
 function saveToLoc() {
     // Saving a string file into the local storage
     localStorage.setItem('histList', JSON.stringify(arrayForStorage));
+    console.log('Saving to local');
     
 }
 
@@ -60,13 +62,13 @@ function retLocStrg() {
         arrayForStorage = JSON.parse(tempStringList);
     }
     
-
+    console.log('Retrieving to local is working');
 }
 
 
 function displayHistory() {
     retLocStrg();
-
+    console.log('Displayhistory is working');
     if (arrayForStorage) {
         addSelect();
 
