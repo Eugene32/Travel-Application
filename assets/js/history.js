@@ -1,17 +1,11 @@
-// var form = document.getElementById('inputForm');
-// var inputDest = document.getElementById('loc-to');
-// var inputFrom = document.getElementById('loc-from');
-// var formDate = document.getElementById('form-date');
-// var historyWindow = document.getElementById('search-content');
-//var historyList = document.getElementById('drop-down');
 var historyList = [];
 var arrayForStorage = [];
+var historyWindow = document.getElementById('history-content');
 
 displayHistory();
 
 function saveToHistory() {
     retLocStrg();
-
     var from = inputFrom.value;
     var to = inputDest.value;
     var date = formDate.value;
@@ -54,6 +48,7 @@ function saveToHistory() {
 function saveToLoc() {
     // Saving a string file into the local storage
     localStorage.setItem('histList', JSON.stringify(arrayForStorage));
+       
 }
 
 // Retrievng local storage if it exists
@@ -64,13 +59,14 @@ function retLocStrg() {
     if (tempStringList) {
         arrayForStorage = JSON.parse(tempStringList);
     }
-
+    
+   
 }
 
 
 function displayHistory() {
     retLocStrg();
-
+    
     if (arrayForStorage) {
         addSelect();
 
@@ -85,8 +81,8 @@ function displayHistory() {
         div.setAttribute('class', 'buttons');
 
         var btnGo = document.createElement('button');
-        btnGo.setAttribute('id' , 'submit-hist');
-        btnGo.setAttribute( 'class', 'button is-info is-fullwidth my-history-btn');
+        btnGo.setAttribute('id', 'submit-hist');
+        btnGo.setAttribute('class', 'button is-info is-fullwidth my-history-btn');
         btnGo.innerText = 'Go';
         div.append(btnGo);
         historyWindow.append(div);
@@ -106,15 +102,6 @@ function addSelect() {
     historyWindow.append(div);
     historyList = document.getElementById('drop-down');
 }
-
-
-// var form = document.getElementById('inputForm');
-// var inputDest = document.getElementById('loc-to');
-// var inputFrom = document.getElementById('loc-from');
-// var formDate = document.getElementById('form-date');
-// var historyWindow = document.getElementById('search-content');
-//var historyList = document.getElementById('drop-down');
-
 
 function sendSelected() {
     var string = historyList.value;
