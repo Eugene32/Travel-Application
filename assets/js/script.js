@@ -20,6 +20,7 @@ form.addEventListener('submit', (event) => {
       citySearch();
       modal.style.display = 'block'
 
+      
       saveToHistory(); // Function to save history
 
 
