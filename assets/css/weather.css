@@ -4,6 +4,9 @@ body {
       flex-direction: column;
       justify-content: center;
 }
+div#main-modal {
+  display: none;
+}
 
 h3.title.is-1 {
   font-size: 25px;
