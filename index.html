@@ -104,7 +104,18 @@
                             <button class="button has-text-centered" id="local-btn" type="submit">My Current City weather</button>
                         </section>
                     
+                    <div id="main-modal" class="modal modal-card">
+                      <div class="modal-background"></div>
+                      <div class="modal-card">
+                        <header class="box modal-card-head mt-5 mr-6 is-pulled-right">
+                          <span class="modal-card-title has-text-centered">
+                            <span id='city-name'></span>
+                          <button class="delete is-pulled-right" aria-label="close"></button>
+                        </header>
                     
+                        
+                        <section id='astro-data' class="box modal-card-body has-text-centered mr-6">
+                          <div id="astroInfo">
                             <h3 class="modal-card-title has-text-centered has-text-grey-darker  mb-3">Astro Data <span id="county-name"></span> </h3>
                                         <div id="textarea" class="">
                                             <ul id="geoList" >
