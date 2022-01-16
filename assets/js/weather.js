@@ -22,9 +22,6 @@ function currentLocation(){
 }
 
 function citySearch(location){
-  //let citySearch = function(location){
-  
-    //let city = searchBar.value.trim().toLowerCase();
     let city = inputDest1.value.trim().toLowerCase();
     console.log("destination" + city + "place");    
    

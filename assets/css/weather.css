@@ -22,10 +22,10 @@ h3.title {
 h3 .title {
   color: black;  
 }
-
-#searchbar {
-    max-width: 50%;
+button#local-btn {
+  margin-top: -14px;
 }
+
 input{
     text-align:center;
  }
