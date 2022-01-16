@@ -6,33 +6,56 @@ var historyWindow = document.getElementById('history-content');
 
 
 form.addEventListener('submit', (event) => {
-    event.preventDefault();  // prevents automatic refresh
-    var Destination = inputDest.value;
-    var Origin = inputFrom.value;
-    var chosenDate = formDate.value
-    
-
-    
-    
-    if (Destination){
-      // Add function here to display map of destination
-      // Add function here to display weather at destination with or without dates
-      citySearch();
-      modal.style.display = 'block';
-
-      
-      saveToHistory(); // Function to save history
+  event.preventDefault();  // prevents automatic refresh
+  var Destination = inputDest.value;
+  var Origin = inputFrom.value;
+  var chosenDate = formDate.value
 
 
-    }
 
-    else if (Destination && Origin){
-      // Add function here to display route from start location to destination
-      // Add function here to display weather at destination with or without dates
 
-      saveToHistory(); // Function to save history
+  if (Destination) {
+    // Add function here to display map of destination
+    // Add function here to display weather at destination with or without dates
+    citySearch();
+    modal.style.display = 'block';
 
-    }
-   
-    
-  });
+
+    saveToHistory(); // Function to save history
+
+
+  }
+
+  else if (Destination && Origin) {
+    // Add function here to display route from start location to destination
+    // Add function here to display weather at destination with or without dates
+
+    saveToHistory(); // Function to save history
+
+  }
+
+});
+
+
+// Server Error Modal
+
+// Get the modal
+var serverError = document.getElementById("serverErrorModal");
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+function serverErrorDisplay() {
+  serverError .style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+  serverError .style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal) {
+    serverError .style.display = "none";
+  }
+}
