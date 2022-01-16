@@ -15,7 +15,7 @@ function resolveLocationName(longitude, latitude) {
             if (response.ok) {
                 return response.json()
             }
-            else {
+            else if (response.status >= 400) {
                 serverErrorDisplay();
             }
         })
@@ -33,7 +33,7 @@ function resolveLocationName(longitude, latitude) {
 
                 return location[0].place_name;
             }
-            else {
+            else if (response.status >= 400){
                 serverErrorDisplay();
             }
 

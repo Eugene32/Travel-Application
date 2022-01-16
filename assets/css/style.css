@@ -15,6 +15,10 @@
     margin: 5px 0px; 
 }
 
+.my-hidden{
+    display: none;
+}
+
 /* Server error errorModal */
 
 /* The errorModal (background) */
