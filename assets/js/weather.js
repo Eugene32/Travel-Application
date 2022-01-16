@@ -1,4 +1,4 @@
-let coordinates = [];
+et coordinates = [];
 let fiveDayBtn = document.getElementById("five-day-btn");
 let localBtn = document.getElementById("local-btn");
 let fiveDayClose = document.getElementById("five-day-close")
@@ -22,8 +22,7 @@ function currentLocation(){
 }
 
 function citySearch(location){
-    let city = inputDest1.value.trim().toLowerCase();
-    console.log("destination" + city + "place");    
+    let city = inputDest1.value.trim().toLowerCase(); 
    
     if(city){
       
