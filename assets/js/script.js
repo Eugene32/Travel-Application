@@ -37,25 +37,28 @@ form.addEventListener('submit', (event) => {
 });
 
 
-// Server Error Modal
+// Server Error Modal Script -- Start
 
-// Get the modal
-var serverError = document.getElementById("serverErrorModal");
+// You can uncomment the two lines below to see the serverErrorModal
+//var serverError = document.getElementById("modalTestButton");
+//serverError.addEventListener('click', serverErrorDisplay);
+
+// Get modal window
+var serverErrorModal = document.getElementById('serverErrorModal');
+
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
+
+// Display the error modal due to server response error
 function serverErrorDisplay() {
-  serverError .style.display = "block";
+  
+  serverErrorModal.style.display = "block";
+
 }
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function () {
-  serverError .style.display = "none";
+  serverErrorModal.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-  if (event.target == modal) {
-    serverError .style.display = "none";
-  }
-}
