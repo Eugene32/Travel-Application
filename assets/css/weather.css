@@ -7,6 +7,9 @@ body {
 div#main-modal {
   display: none;
 }
+.modal-card {
+  width: 100%;
+}
 
 h3.title.is-1 {
   font-size: 25px;
@@ -62,7 +65,7 @@ input{
 } 
 .forecastbox {
     text-align: center;
-    max-height: calc(80% - 10px);
+    max-height: calc(75% - 10px);
     overflow-y: auto;
     width:25%;
     flex-direction: column;
@@ -83,17 +86,8 @@ p {
 .card-body {
     padding: 5px;
 }
-#searchbar{
-  display:none;
-}
-#btn{
-  display: none;
-}
-#saved-searches{
-  display: none;
-}
-#local-btn{
-  display: none;
+section#weather-section {
+  min-width: 30%;
 }
 
 @media screen and (max-width: 1050px) {
@@ -102,6 +96,12 @@ p {
     }
     .forecastbox p {
         font-size: 15px;
-    }
+    }   
 
  }
+ @media screen and (max-width: 750px) {
+.modal-card{
+  width: 100%;
+}
+ }
+ 
