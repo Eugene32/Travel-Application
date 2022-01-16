@@ -33,6 +33,7 @@ function citySearch(location){
       
       
    }else if(location){
+     
     console.log(location);
 
     getGeoApi(city);
