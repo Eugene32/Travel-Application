@@ -114,13 +114,13 @@ function sendSelected() {
     // Reflect history unto input elements
     inputDest.value = arr1[0];
     inputFrom.value = arr1[1];
-    formDate.value = arr1[2];
+   
 
     //Invoke map function
     
     var Destination = inputDest.value;
     var Origin = inputFrom.value;
-    var chosenDate = formDate.value
+   
     direction.setDestination(Destination);
     direction.setOrigin(Origin);
 

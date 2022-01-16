@@ -79,30 +79,9 @@ form.addEventListener('submit', (event) => {
     event.preventDefault();  // prevents automatic refresh
     var Destination = inputDest.value;
     var Origin = inputFrom.value;
-    var chosenDate = formDate.value
+    
     direction.setDestination(Destination);
     direction.setOrigin(Origin);
-
-
-
-
-    if (Destination) {
-        // Add function here to display map of destination
-        // Add function here to display weather at destination with or without dates
-
-
-        saveToHistory(); // Function to save history
-
-    }
-
-    else if (Destination && Origin) {
-        // Add function here to display route from start location to destination
-        // Add function here to display weather at destination with or without dates
-
-        saveToHistory(); // Function to save history
-
-    }
-
 
 });
 
