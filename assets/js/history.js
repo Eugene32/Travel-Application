@@ -1,10 +1,6 @@
 var historyList = [];
 var arrayForStorage = [];
 var historyWindow = document.getElementById('history-content');
-var form = document.getElementById('inputForm');
-var inputDest = document.getElementById('loc-to');
-var inputFrom = document.getElementById('loc-from');
-var formDate = document.getElementById('form-date');
 
 displayHistory();
 
@@ -111,21 +107,8 @@ function sendSelected() {
     var string = historyList.value;
     var arr1 = string.split(',');
 
-    // Reflect history unto input elements
     inputDest.value = arr1[0];
     inputFrom.value = arr1[1];
-   
-
-    //Invoke map function
-    
-    var Destination = inputDest.value;
-    var Origin = inputFrom.value;
-   
-    direction.setDestination(Destination);
-    direction.setOrigin(Origin);
-
-    // Invoke weather function
-    citySearch();
-    modal.style.display = 'block';
+    formDate.value = arr1[2];
 
 }
