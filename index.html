@@ -27,8 +27,6 @@
         href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css"
         type="text/css">
 
-    <link rel="stylesheet" href="./assets/images/Travel-App-demo.png">
-
 
 </head>
 
@@ -58,15 +56,13 @@
                         </div>
                     </div>
 
-                    
-                    <div class="field my-hidden">    
+                    <div class="field">
                         <label class="label">Date: </label>
                         <div class="control">
                             <input id="form-date" class="input is-info" type="date">
 
                         </div>
                     </div>
-
                     <input id="btn-submit" type="submit" value="Submit" class="button is-info is-fullwidth">
                 </form>
 
@@ -78,7 +74,11 @@
                         </div>
                     </div>
                 </div>
-                
+                <div class="field">
+                    <div class="control">
+                        <input id="loc-to1" class="input is-info" type="text" placeholder="Sydney">
+
+                    </div>
             </section>
 
             <section id="map-section" class="container column">
@@ -95,107 +95,51 @@
             <!--Weather Section-->
             <section id="weather-section" class="container column is-one-quarter one">
                 <div class="box my-weather-box">
-                   
-                        <h3 class="title is-1">Weather App</h3>                    
-                    
-                        <section id="search-city" class="search container has-text-centered mb-3">
-                            <button class="button has-text-centered" id="local-btn" type="submit">My City Weather</button>
-                        </section>
-                    
-                    <div id="main-modal" class="container is-full-width">
-                      <div class="modal-card">
-                        <header class="box modal-card-head mt-1 is-pulled-right">
-                          <span class="modal-card-title has-text-centered">
-                            <span id='city-name'></span>
-                          <button class="delete is-pulled-right" aria-label="close"></button>
-                        </header>
-                    
-                        
-                        <section id='astro-data' class="box modal-card-body has-text-centered">
-                          <div id="astroInfo">
-                            <h3 class="modal-card-title has-text-centered has-text-grey-darker  mb-3">Astro Data <span id="county-name"></span> </h3>
-                                        <div id="textarea" class="">
-                                            <ul id="geoList" >
-                                                <li>  </li>
-                                                <li>  </li>
-                                                <li>  </li>
-                                                <li>  </li>
-                                                <li>  </li>
-                                                <li>  </li>
-                                            </ul>
-                                        </div>
-                          </div>
-                        </section>
-                        
-                        
-                        <section id='display-city' class="box modal-card-body weather-forecast has-text-centered">
-                          <p><strong>Current Temperature: </strong><span id='city-temp'></span></p>
-                          <p><strong>Feels Like: </strong><span id='city-feelslike'></span></p>
-                          <p><strong>Current Humidity: </strong><span id='city-humidity'></span></p>
-                          <p><strong>Current UV Index: </strong><span id='city-uvindex'%></span></p>
-                          <br>
-                          <button id="five-day-btn" class="button">Five Day Forecast</button>
-                          </section> 
-                      </div>
-                    </div>
-                    
-                    <div id="forecast-modal"  class="modal forecastbox mt-5 ml-5" draggable="true">
-                      <div id="forecast" class="modal-background">
-                        
-                          <button id = "five-day-close"class="delete is-pulled-right" aria-label="close"></button>
-                    
-                          
-                                  <div class="has-text-white has-background-info">
-                                      <div class="card-body">
-                                          <h4 class="card-title" id="day-1"></h4>
-                                          <img id="icon1"/>
-                                      <br>
-                                      <p class="card-text">Temp: <span id="temp-1"></span></p>
-                                      <p>Humidity: <span id="humidity-1"></span></p>
-                                      </div>
-                                  </div>  
-                          
-                          <div class="has-text-white has-background-link">               
-                             <div class="card-body">
-                                          <h4 class="card-title" id="day-2"></h4>
-                                          <img id="icon2"/>
-                                      <br>
-                                      <p class="card-text">Temp: <span id="temp-2"></span></p>
-                                      <p>Humidity: <span id="humidity-2"></span></p>
-                                      </div>
-                                  </div>
-                          
-                          <div class="has-text-white has-background-info">
-                                            <div class="card-body">
-                                          <h4 class="card-title" id="day-3"></h4>
-                                          <img id="icon3"/>
-                                      <br>
-                                      <p class="card-text">Temp: <span id="temp-3"></span</p>
-                                      <p>Humidity: <span id="humidity-3"></span</p>
-                                      </div>
-                                  </div>
-                          
-                          <div class="has-text-white has-background-link">
-                                            <div class="card-body">
-                                          <h4 class="card-title" id="day-4"></h4>
-                                          <img id="icon4"/>
-                                      <br>
-                                      <p class="card-text">Temp: <span id="temp-4"></span</p>
-                                      <p>Humidity: <span id="humidity-4"></span</p>
-                                      </div>
-                                  </div>
-                          
-                          <div class="has-text-white has-background-info">
-                                            <div class="card-body">
-                                          <h4 class="card-title" id="day-5"></h4>
-                                          <img id="icon5"/>
-                                      <br>
-                                      <p class="card-text">Temp: <span id="temp-5"></span</p>
-                                      <p>Humidity: <span id="humidity-5"></span</p>
-                                      </div>
-                                  </div> 
-                              
 
+                    <h3 class="title is-1">Weather App</h3>
+
+                    <section id="search-city" class="search container has-text-centered mb-5">
+                        <button class="button has-text-centered" id="local-btn" type="submit">My Current City
+                            weather</button>
+                    </section>
+
+                    <div id="main-modal" class="container is-full-width">
+                        <div class="modal-card">
+                            <header class="box modal-card-head mt-1 is-pulled-right">
+                                <span class="modal-card-title has-text-centered">
+                                    <span id='city-name'></span>
+                                    <button class="delete is-pulled-right" aria-label="close"></button>
+                            </header>
+
+
+                            <section id='astro-data' class="box modal-card-body has-text-centered">
+                                <div id="astroInfo">
+                                    <h3 class="modal-card-title has-text-centered has-text-grey-darker  mb-3">Astro Data
+                                        <span id="county-name"></span>
+                                    </h3>
+                                    <div id="textarea" class="">
+                                        <ul id="geoList">
+                                            <li> </li>
+                                            <li> </li>
+                                            <li> </li>
+                                            <li> </li>
+                                            <li> </li>
+                                            <li> </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </section>
+
+
+                            <section id='display-city' class="box modal-card-body weather-forecast has-text-centered">
+                                <p><strong>Current Temperature: </strong><span id='city-temp'></span></p>
+                                <p><strong>Feels Like: </strong><span id='city-feelslike'></span></p>
+                                <p><strong>Current Humidity: </strong><span id='city-humidity'></span></p>
+                                <p><strong>Current UV Index: </strong><span id='city-uvindex' %></span></p>
+                                <br>
+                                <button id="five-day-btn" class="button">Five Day Forecast</button>
+                            </section>
+                        </div>
                     </div>
 
                     <div id="forecast-modal" class="modal forecastbox mt-5 ml-5" draggable="true">
@@ -253,29 +197,17 @@
                                             <p>Humidity: <span id="humidity-5"></span< /p>
                                 </div>
                             </div>
+
+                        </div>
+                        <button class="modal-close is-large" aria-label="close"></button>
+                    </div>
+
+                </div>
             </section>
-        </div>
-        </div>
-        <button class="modal-close is-large" aria-label="close"></button>
-        </div>
-
-        </div>
-        </section>
 
 
 
-        <!--Weather App Ends here-->
-
-        <!-- The server error Modal -->
-        <div id="serverErrorModal" class="errorModal">
-           
-            <!-- Modal content -->
-            <div class="errorModal-content">
-                <span class="close">&times;</span>
-                <p>Server Response Error</p>
-            </div>
-
-        </div>
+            <!--Weather App Ends here-->
 
 
     </main>
@@ -283,13 +215,6 @@
         <div class="content has-text-centered">
             <span>&copy &#x1d19&#670 KJL SK 2022</span>
         </div>
-
-        <!-- You can uncomment the div/button element below to test the serverErorr modal -->
-        <!--         
-        <div class="box">
-            <button id="modalTestButton" class="button">This is the modal button</button>
-        </div> -->
-
     </footer>
 
 
