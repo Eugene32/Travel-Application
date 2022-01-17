@@ -3,7 +3,7 @@
 This web page is a Travel Planner that:
  - Allows input from user a point of origin and destination.
    - Routing is limited to travel by land only.  Travel by sea or air cannot be plotted.
- - Shows current weather forecast for the destination and a 5-day forecast.
+ - Shows current weather for the destination and a 5-day forecast.
  - Search history will be saved and can be retrieved from the drop-down list.
    - Search history is currently limited to 5 items only.
  - Used momentjs, Bulma, server APIs (mapbox, ipdata, ipgeolocation, & openweathermap)
