@@ -14,5 +14,16 @@
 .my-history-btn{
     margin: 5px 0px; 
 }
+#form-date{
+    display: none;
+}
+
+#label date{
+    display: none;
+}
+#loc-to1{
+    display: none;
+
+}
 
 
