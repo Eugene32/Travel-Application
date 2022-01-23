@@ -17,6 +17,6 @@ Web page link --> [Travel Planner](https://eugene32.github.io/Travel-Application
 
 Web page preview:
 
-![alt text][logo]
+![Travel App][logo]
 
 [logo]: assets/images/Travel-App-demo.png "Travel Planner demo"
