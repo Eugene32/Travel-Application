@@ -6,7 +6,7 @@ This web page is a Travel Planner that:
  - Shows current weather for the destination and a 5-day forecast.
  - Search history will be saved and can be retrieved from the drop-down list.
    - Search history is currently limited to 5 items only.
- - Used momentjs, Bulma, server APIs (mapbox, ipdata, ipgeolocation, & openweathermap)
+ - Technologies used momentjs, Bulma, server APIs (mapbox, ipdata, ipgeolocation, & openweathermap)
 
 
  - Limitations:
