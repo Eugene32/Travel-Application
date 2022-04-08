@@ -19,3 +19,8 @@ Web page preview:
 ![Travel App][logo]
 
 [logo]: assets/images/Travel-App-demo.png "Travel Planner demo"
+
+Contributors:
+- [Sorna Kesavan](https://github.com/alsornak)
+- [Karthik-JaganathanLoganathan](https://github.com/Karthik-JaganathanLoganathan)
+- [Reynan Kanindot](https://github.com/Eugene32)
